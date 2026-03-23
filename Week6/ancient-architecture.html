@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Architecture</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Ancient Architecture</h1>
+<nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="img-container">
+        <img src="tháp.jpg" alt="Chichen Itza Pyramid">
+    </div>
+
+    <main>
+        
+        <article>
+            <header>
+                <h3>Ancient Roman architecture</h3>
+                <p> <strong>Posted on 01.01.2017 by </strong> <a href="#">Someone</a></p>
+            </header>
+            <img src="Colosseum.jpg" alt="Colosseum">
+            <p>
+                Ancient Roman architecture adopted the external language of classical Greek architecture for the purposes of the ancient Romans, but grew so different from Greek buildings as to become a new architectural style. The two styles are often considered one body of classical architecture. Roman architecture flourished in the Roman Republic and even more so under the Empire, when the great majority of surviving buildings were constructed. It used new materials, particularly concrete, and newer technologies such as the arch and the dome to make buildings that were typically strong and well-engineered. Large numbers remain in some form across the empire, sometimes complete and still in use.
+            </p>
+            <div class="buttons">
+                <span class="comments"><a href="#">0 Comments</a></span>
+                <span class="readme"><a href="#">View Post</a></span>
+            </div>
+        </article>
+
+        <article>
+            <header>
+                <h3>Ancient Greek architecture</h3>
+                <p> <strong>Posted on 01.01.2017 by </strong><a href="#">Someone</a></p>
+            </header>
+            <img src="parthenon.jpg" alt="Parthenon">
+            <p>
+                The architecture of ancient Greece is the architecture produced by the Greek-speaking people (Hellenic people) whose culture flourished on the Greek mainland, the Peloponnese, the Aegean Islands, and in colonies in Anatolia and Italy for a period from about 900 BC. Until the 1st century AD, with the earliest remaining architectural works dating from around 600 BC. [1] Ancient Greek architecture is best known from its temples, many of which are found throughout the region, mostly as ruins but many substantially intact. The second important type of building that survives all over the Hellenic world is the open- air theatre, with the earliest dating from around 525-480 BC.
+            </p>
+            <div class="buttons">
+                <span class="comments"><a href="#">0 Comments</a></span>
+                <span class="readme"><a href="#">View Post</a></span>
+            </div>
+        </article>
+
+        <article>
+            <header>
+                <h3>Ancient Indian Architecture</h3>
+                <p> <strong>Posted on 01.01.2017 by </strong><a href="#">Someone</a></p>
+            </header>
+            <img src="Machu Picchu.jpg" alt="Machu Picchu">
+            <p>
+                Indian architecture is as old as the history of civilization. The earliest remains of recognizable building activity in the India dates back to the Indus Valley cities. Among India's ancient architectural remains, the most characteristic are the temples, Chaitvas, Viharas. Stupas and other religious structures. In ancient India, temple architecture of high standard developed in almost all regions. The distinct architectural style of temple construction in different parts was a result of geographical, climatic, ethnic, racial, historical and linguistic diversities. The Rock-cut structures present the most spectacular piece of ancient Indian art specimen. Most of the rock-cut structures were related to various religious communities.
+            </p>
+            <div class="buttons">
+                <span class="comments"><a href="#">0 Comments</a></span>
+                <span class="readme"><a href="#">View Post</a></span>
+            </div>
+        </article>
+
+    </main>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #e2d7aa;
+    color: #000000;
+    font-size: 16px;
+    width: 1180px;
+    line-height: 24px;
+    margin: 0 auto; 
+}
+h1 {
+    font-size: 60px;
+    font-family: 'Indie Flower', cursive;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 65px;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    margin: 30px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 28px;
+    color: #000000;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    padding: 0 12px 0 12px;
+}
+
+nav ul li:first-of-type a,
+nav ul li:last-of-type a {
+    padding-left: 0;
+    color: #0a2d4a;
+    font-weight: bold;
+}
+body > div.img-container {
+    width: 100%; 
+    height: 450px;
+    margin-top: 65px;
+    text-align: center;
+}
+
+body > div.img-container > img {
+    width: 1100px;
+    height: 450px;
+    object-fit: cover;
+}
+main {
+    margin-top: 30px;
+    text-align: center; 
+}
+
+article {
+    width: 370px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 10px;
+    text-align: left;
+}
+
+main > article img {
+    width: 350px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+p {
+    width: 345px;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+article img + p:first-letter {
+    font-family: 'EucrosiaUPC', sans-serif; 
+    text-transform: uppercase;
+    font-size: 40px;
+    float: left;
+    line-height: 1;
+    padding-right: 5px;
+}
+.readme a, .comments a {
+    background: url('images/bg2.jpg');
+    background-color: #8b6b43; 
+    color: #ffffff;
+    padding: 10px;
+    display: inline-block;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+article p:last-of-type span:first-of-type a::before {
+    content: url("images/comment.png");
+    position: relative;
+    padding-right: 10px;
+    top: 7px;
+}
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+footer p {
+    width: 100%;       
+    text-align: center; 
+}
+article header {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+article header h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+article header p {
+    width: 100% !important;
+    text-align: center;
+    margin: 0 auto 15px auto;
+}
+</style>
+<footer>
+<p>&copy; Copyright OldWorld by Anonymous. Photos by Anonymous.</p>
+</footer> 
+</body>
+</html>
