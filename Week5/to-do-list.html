@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <title>The priority of selectors</title>
     <style type="text/css">
-        /* 1. Bộ chọn phổ quát (Universal Selector) - Độ ưu tiên thấp nhất */
         * {
             font: 20px "Comic Sans MS";
         }
 
-        /* 2. Bộ chọn thẻ tùy chỉnh (Custom Tag) */
         MyCustomizeTag {
             display: block;
             text-align: center;
@@ -18,26 +16,23 @@
             width: 500px;
         }
 
-        /* 3. Bộ chọn thẻ (Element Selector) */
         div {
             background-color: yellow;
             margin: 0px 0px 5px 5px;
             width: 300px;
         }
 
-        /* 4. Bộ chọn Class (Class Selector) - Ưu tiên hơn thẻ div */
         .GroupFormat {
             font-weight: bold;
             color: #f00; /* Màu đỏ */
             width: 400px;
         }
 
-        /* 5. Bộ chọn ID (ID Selector) - Ưu tiên cao nhất trong các bộ chọn này */
         #TheHighestPriority {
-            background-color: #000; /* Màu đen */
-            font-weight: normal;    /* Trong ảnh ghi 'none', chuẩn CSS là 'normal' */
+            background-color: #000; 
+            font-weight: normal;   
             font: italic 30px "Times New Roman";
-            color: #fff;            /* Màu trắng */
+            color: #fff;           
         }
     </style>
 </head>
