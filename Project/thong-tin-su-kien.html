@@ -116,12 +116,12 @@
     <nav>
         <a href="#" class="logo">TIKPAS</a>
         <div class="nav-links">
-            <a href="#" class="active">Tất cả</a>
-            <a href="#">Nhạc sống</a>
-            <a href="#">Sân khấu</a>
-            <a href="#">Thể thao</a>
-            <a href="#">Workshop</a>
-            <a href="#">Tham quan</a>
+            <a href="javascript:void(0)" class="active" onclick="filterEvents('all', this)">Tất cả</a>
+    <a href="javascript:void(0)" onclick="filterEvents('nhac-song', this)">Nhạc sống</a>
+    <a href="javascript:void(0)" onclick="filterEvents('san-khau', this)">Sân khấu</a>
+    <a href="javascript:void(0)" onclick="filterEvents('the-thao', this)">Thể thao</a>
+    <a href="javascript:void(0)" onclick="filterEvents('workshop', this)">Workshop</a>
+    <a href="javascript:void(0)" onclick="filterEvents('tham-quan', this)">Tham quan</a>
         </div>
         <div class="flex items-center gap-6 text-[#211F60]">
             <span class="material-symbols-outlined cursor-pointer">notifications</span>
@@ -133,18 +133,18 @@
         <h2 class="text-3xl font-bold mb-10 border-l-4 border-[#FF69B4] pl-4">Tất cả sự kiện</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div class="event-card">
+                <div class="event-card" data-category="nhac-song">
                 <img src="https://nhandan.vn/special/concert-quoc-gia/assets/VRx4fQenFT/cover-100-2560x1440.jpg" class="h-60 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">Concert Quốc Gia</h3>
                     <p class="text-blue-200/60 text-sm mb-6 flex items-center">
                         <span class="material-symbols-outlined text-sm mr-2">calendar_today</span> 20:00, 28 Th04, 2026
                     </p>
-                    <button onclick="showDetail('concert-quoc-gia')" class="btn-pink">Xem chi tiết</button>
+                    <button onclick="showDetail('concert-quoc-gia')" class="btn-pink">Xem chi tiết</button>s
                 </div>
             </div>
-
-            <div class="event-card">
+  
+                <div class="event-card" data-category="nhac-song">
                 <img src="https://salt.tkbcdn.com/ts/ds/44/e2/90/76fb84dbfdcd86e99f720aca467ffd04.png" class="h-60 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">Vũ. - Bảo Tàng Của Nuối Tiếc</h3>
@@ -155,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="event-card">
+            <div class="event-card" data-category="san-khau">
                 <img src="https://salt.tkbcdn.com/ts/ds/e8/8b/ce/63f194114700ddefc08d93389daea035.jpg" class="h-60 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">[Nhà Hát Kịch Thanh Niên] Hài kịch: Nữ Hoàng Giải Trí</h3>
@@ -166,7 +166,7 @@
                 </div>
             </div>
 
-            <div class="event-card">
+            <div class="event-card" data-category="the-thao">
                 <img src="https://salt.tkbcdn.com/ts/ds/a5/52/2c/ffc572a433c8ca5054c623f32ebd9733.jpg" class="h-60 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">CHUNG KẾT ĐẤU TRƯỜNG DANH VỌNG MÙA XUÂN 2026</h3>
@@ -177,7 +177,7 @@
                 </div>
             </div>
 
-            <div class="event-card">
+            <div class="event-card" data-category="workshop">
                 <img src="https://salt.tkbcdn.com/ts/ds/b1/3e/28/d69a7364cf94fac81eee3786bdf0a286.jpg" class="h-60 w-full object-cover">
                 <div class="p-6">
                     <h3 class="text-xl font-bold mb-2">[LEMLAB] Workshop TRẢI NGHIỆM LÀM GỐM</h3>
@@ -185,6 +185,17 @@
                         <span class="material-symbols-outlined text-sm mr-2">calendar_today</span> 10:00, 26 Th04, 2026
                     </p>
                     <button onclick="showDetail('workshop')" class="btn-pink">Xem chi tiết</button>
+                </div>
+            </div>
+
+            <div class="event-card" data-category="tham-quan">
+                <img src="https://salt.tkbcdn.com/ts/ds/47/19/34/ab4d5359e79aa5204c3a8376f0c96747.png" class="h-60 w-full object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold mb-2">TOUR ĐÊM VĂN MIẾU - VAN MIEU NIGHT TOUR</h3>
+                    <p class="text-blue-200/60 text-sm mb-6 flex items-center">
+                        <span class="material-symbols-outlined text-sm mr-2">calendar_today</span> 18:00, 26 Th04, 2026
+                    </p>
+                    <button onclick="showDetail('tham-quan')" class="btn-pink">Xem chi tiết</button>
                 </div>
             </div>
 
@@ -260,6 +271,16 @@
                 performance: 'Workshop.'
                 
             },
+            'tham-quan': {
+                title: 'TOUR ĐÊM VĂN MIẾU - VAN MIEU NIGHT TOUR',
+                image: 'https://salt.tkbcdn.com/ts/ds/47/19/34/ab4d5359e79aa5204c3a8376f0c96747.png',
+                tag: 'THAM QUAN',
+                time: '18:00 - 26/04/2026',
+                location: 'Văn Miếu - Quốc Tử Giám, 58, Phường Quốc Tử Giám, Quận Đống Đa, Thành Phố Hà Nội',
+                about: 'Một không gian vừa mộc mạc, vừa quen thuộc nhưng lại ấn tượng về đêm với sắc thái ngàn năm văn hiến. Nhấn mạnh vào hành trình học, trở thành những bậc kỳ tài của đất nước, không gian Văn Miếu - Quốc Tử Giám về đêm được tái hiện toàn cảnh một môi trường đơn sơ về học tập thời xưa, trong trang sử 1000 năm trước, nơi hệ thống giáo dục phần lớn do các Thầy Đồ đảm nhiệm. Đến với tour đêm Văn Miếu, bạn sẽ có cái nhìn toàn cảnh về nền quốc học Việt Nam, nơi mỗi người không chỉ học cái chữ mà còn học để khám phá ra cái chân - thiện - mỹ đã có sẵn nơi mình.',
+                performance: 'Tham quan.'
+                
+            },
             
         };
 
@@ -268,6 +289,10 @@
             const content = document.getElementById('modalContent');
             content.innerHTML = `
                 <div class="relative h-[55vh]">
+                    <button onclick="closeModal()" class="absolute top-6 left-6 z-50 bg-black/40 hover:bg-[#FF69B4] text-white px-4 py-2 rounded-full flex items-center gap-2 backdrop-blur-md transition-all border border-white/20">
+                        <span class="material-symbols-outlined text-xl">arrow_back</span>
+                        <span class="font-bold text-sm">Quay lại trang chủ</span>
+                    </button>
                     <img src="${data.image}" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-[#211F60] via-transparent to-black/20"></div>
                     <div class="absolute bottom-10 left-6 right-6 lg:left-20">
@@ -306,6 +331,28 @@
             document.getElementById('eventModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+        function filterEvents(category, clickedElement) {
+    // 1. Cập nhật hiệu ứng gạch chân (active) cho menu
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => link.classList.remove('active')); // Xóa active tất cả
+    clickedElement.classList.add('active'); // Thêm active cho mục vừa bấm
+
+    // 2. Lọc các sự kiện
+    const allCards = document.querySelectorAll('.event-card');
+    
+    allCards.forEach(card => {
+        // Lấy nhãn của thẻ hiện tại
+        const cardCategory = card.getAttribute('data-category');
+        
+        // Nếu chọn "Tất cả" HOẶC nhãn của thẻ khớp với thể loại đang chọn -> Hiển thị
+        if (category === 'all' || category === cardCategory) {
+            card.classList.remove('hidden'); 
+        } else {
+            // Nếu không khớp -> Ẩn đi
+            card.classList.add('hidden');
+        }
+    });
+}
         
     </script>
 </body>
